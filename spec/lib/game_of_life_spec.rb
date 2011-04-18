@@ -55,14 +55,14 @@ describe GameOfLife::Game do
     lambda { @game.run(5) }.should_not raise_error
   end
 
-  it 'should run game for one round' do
+  it 'should run game for one round and reset board' do
     @game.run
-    @game.board == @after_one_board
+    @game.board.should == @after_one_board
   end
 
-  it 'should run game for five round' do
+  it 'should run game for five round and reset board' do
     @game.run(5)
-    @game.board == @after_five_board
+    @game.board.should == @after_five_board
   end
 
   it 'should print board' do

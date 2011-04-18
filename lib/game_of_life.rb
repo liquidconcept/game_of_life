@@ -12,6 +12,7 @@ module GameOfLife
       nb.times do
         r+=@board
       end
+      @board=nil
       return r
     end
     
